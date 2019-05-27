@@ -3,8 +3,7 @@ pipeline {
   stages {
     stage('Get Repo') {
       steps {
-        sh '''pwd
-echo $USER'''
+        sh 'tar --exclude=\'./folder\' --exclude=\'./package.tgz\' -zcvf /backup/filename.tgz .'
       }
     }
   }
