@@ -1,9 +1,14 @@
 pipeline {
   agent any
   stages {
-    stage('Get Repo') {
+    stage('Create Package') {
       steps {
         sh 'tar -zcvf /package.tgz .'
+      }
+    }
+    stage('') {
+      steps {
+        archiveArtifacts 'package.tgz'
       }
     }
   }
