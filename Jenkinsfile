@@ -3,7 +3,8 @@ pipeline {
   stages {
     stage('Get Repo') {
       steps {
-        sh 'pwd'
+        sh '''pwd
+echo $USER'''
       }
     }
   }
