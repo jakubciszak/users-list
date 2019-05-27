@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Create Package') {
       steps {
-        sh '''tar -zcvf ./package.tgz .
+        sh '''tar -cf --exclude=\'package.tgz\' --exclude=\'./.git\' ./package.tgz .
 
 ls -la ./'''
       }
