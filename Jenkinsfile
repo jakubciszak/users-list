@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Get Repo') {
       steps {
-        sh 'ls -la'
+        sh 'pwd'
       }
     }
   }
