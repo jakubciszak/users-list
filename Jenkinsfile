@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Get Repo') {
       steps {
-        sh 'tar --exclude=\'./folder\' --exclude=\'./package.tgz\' -zcvf /backup/filename.tgz .'
+        sh 'tar -zcvf /backup/filename.tgz .'
       }
     }
   }
