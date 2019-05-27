@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Get Repo') {
       steps {
-        sh 'tar -zcvf /backup/filename.tgz .'
+        sh 'tar -zcvf /package.tgz .'
       }
     }
   }
