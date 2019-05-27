@@ -3,10 +3,12 @@ pipeline {
   stages {
     stage('Create Package') {
       steps {
-        sh 'tar -zcvf /package.tgz .'
+        sh '''tar -zcvf ./package.tgz .
+
+ls -la ./'''
       }
     }
-    stage('') {
+    stage('error') {
       steps {
         archiveArtifacts 'package.tgz'
       }
